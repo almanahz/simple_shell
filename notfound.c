@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  * print_not_found - Prints error message when a command is not found
  * @arguments: array of args typed by the user
  * @counter: Times that the shell has been executed
  * Return: Exit status
  */
+
 int print_not_found(char **arguments, int counter)
 {
 	char *imode_shell_name = "hsh";
@@ -21,5 +23,6 @@ int print_not_found(char **arguments, int counter)
 	write(2, ": ", 2);
 	write(2, arguments[0], _strlen(arguments[0]));
 	write(2, ": not found\n", 12);
+
 	return (127);
 }

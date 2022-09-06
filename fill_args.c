@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * fill_args - Fill an array with every input typed by the user
  * @entry: String with the input
@@ -21,5 +22,6 @@ int fill_args(char *entry, char **arguments)
 		arguments[i] = options; /**almacena parameter i en args[i]*/
 	}
 	arguments[i] = NULL; /**Marca el fin array*/
+
 	return (i); /**Retorna el length de args[]*/
 }

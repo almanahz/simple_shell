@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  * _printp - Prints the prompt in the standar input
  * @prompt: Pointer to the string to be printed
  * @size: Length ot the prompt
  * Return: 0 if success or -1 if fails
  */
+
 int _printp(const char *prompt, unsigned int size)
 {
 	int written;
@@ -15,6 +17,7 @@ int _printp(const char *prompt, unsigned int size)
 		if (written == -1)
 			return (-1);
 	}
+
 		return (0);
 }
 

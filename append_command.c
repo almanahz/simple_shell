@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  * append_command - Concatenates an input with paths in global variable PATH
  * @dir_path: directory string to be append with the command
  * @command: command to be concatenated with the directory
  * Return: Buffer to concatenated path
  */
+
 char *append_command(char *dir_path, char *command)
 {
 	int a, b = 0, len1, len2;
@@ -16,6 +18,7 @@ char *append_command(char *dir_path, char *command)
 	len1 = _strlen(dir_path);
 	len2 = _strlen(command);
 	command_path = malloc(len1 + len2 + 2);
+
 	if (command_path == NULL)
 		return (NULL);
 	for (a = 0; dir_path[a] != '\0'; a++)

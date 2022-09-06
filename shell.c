@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  * main - This is a simple shell created by
  * Marisol Ramirez Henao and David Alejandro Hincapié
  * for Holberton School
  * Return: 0 if success
  */
+
 int main(void)
 {
 	ssize_t bytes_rd = 0; /** Bytes leídos de un getline*/
@@ -14,6 +16,7 @@ int main(void)
 
 	_printp("$ ", 2);/**prompt mini-shell*/
 	bytes_rd = getline(&entry, &bf_size, stdin); /**sizeof entry, o -1 (EOF))*/
+
 	while (bytes_rd != -1)
 	{
 		if (*entry != '\n')
@@ -46,5 +49,6 @@ int main(void)
 		_printp("$ ", 2), bytes_rd = getline(&entry, &bf_size, stdin);
 	}
 	last_free(entry);
+
 	return (exit_stat);
 }

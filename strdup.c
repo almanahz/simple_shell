@@ -1,9 +1,11 @@
 #include "main.h"
+
 /**
  * _strdup - Duplicates a string
  * @str: String to be duplicated
  * Return: Pointer to the duplicated string
  */
+
 char *_strdup(char *str)
 {
 	unsigned int i, len;
@@ -21,5 +23,6 @@ char *_strdup(char *str)
 	{
 		duplicate[i] = str[i];
 	}
+
 	return (duplicate);
 }

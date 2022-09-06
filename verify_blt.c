@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  * verify_blt - Verify if the input is a builtin
  * @arguments: Pointer to the array of arguments
  * @exit_stat: Current exit status
  * Return: -1 if the command is not a builtin, 0 if it is
  */
+
 int verify_blt(char **arguments, int exit_stat)
 {
 	char *builtins[2] = {
@@ -32,5 +34,6 @@ int verify_blt(char **arguments, int exit_stat)
 			return (0);
 		write(1, environ, 1000);
 	}
+
 	return (0);
 }

@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_numbers - Prints numbers, used to print the error message
  * @n: number to print
@@ -22,5 +23,6 @@ int print_numbers(int n)
 	if (number / 10 != '\0')
 		i = i + print_numbers(number / 10);
 	i = i + _putchar(number % 10 + '0');
+
 	return (i);
 }

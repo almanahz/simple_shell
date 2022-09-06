@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _strlen - Sizes the length of a string
  * @string: String to be sized
@@ -14,5 +15,6 @@ int _strlen(const char *string)
 
 	while (string[length] != '\0')
 		length++;
+
 	return (length);
 }

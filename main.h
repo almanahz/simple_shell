@@ -1,5 +1,7 @@
 #ifndef _MAIN_H
-#define _MAIN_
+#define _MAIN_H
+
+/** Libraries */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,6 +13,7 @@
 #include <limits.h>
 #include <time.h>
 
+/** Prototypes */
 extern char **environ;
 
 int _strcmp(char *str1, char *str2);
@@ -30,4 +33,4 @@ void free_grid(char **grid, int heigth);
 void last_free(char *entry);
 int verify_blt(char **arguments, int exit_stat);
 
-#endif
+#endif /** _MAIN_H */

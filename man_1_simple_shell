@@ -1,4 +1,4 @@
-.TH SIMPLE-SHELL "06 SEPTEMBER 2022" "0.6" "Holberton Simple-Shell"
+.TH SIMPLE-SHELL "06 SEPTEMBER 2022" "0.6" "ALX Simple-Shell"
 
 .SH NAME
 .B Simple Shell - a simple UNIX command interpreter in C
@@ -56,6 +56,7 @@ hsh main.c shell.c test_ls_1
 When you type yes it shows an infinite loop.
 
 .SH AUTHORS
-.B Abdulqudus Abdulsalam - John 
+.B Abdulqudus Abdulsalam - Afolami John
 .br
- \ @almanahz\ 
+ \ @almanahz\
+ \@jhohn-code\

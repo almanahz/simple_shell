@@ -1,9 +1,11 @@
 #include "main.h"
+
 /**
  * _getenv - Get the content of a global variable
  * @global_var: Variable to extract from environ
  * Return: Pointer to the content of a variable, or NULL if fails
  */
+
 char *_getenv(char *global_var)
 {
 	int i = 0;
@@ -31,5 +33,6 @@ char *_getenv(char *global_var)
 			envdup = _strdup(environ[i]);
 		}
 	}
+
 	return (NULL);
 }
