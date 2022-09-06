@@ -1,9 +1,11 @@
 #include "main.h"
+
 /**
  * exist - Verify if a file exist
  * @pathname: path to the file
  * Return: 0 if the file exist or -1 if not
  */
+
 int exist(char *pathname)
 {
 	int exist_stat;
