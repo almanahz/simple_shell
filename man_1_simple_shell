@@ -1,61 +1,85 @@
-.TH SIMPLE-SHELL "06 SEPTEMBER 2022" "0.6" "Holberton Simple-Shell"
-
+.\" Man page for hsh
+.TH HSH 1 "28 August 2019" "Holberton" "Holberton Shell Man Page"
 .SH NAME
-.B Simple Shell - a simple UNIX command interpreter in C
-\- Command interpreter (shell)
-
-.SH SYNOPSIS
-Simple_shell [command] [file]
-
-.SH DESCRIPTION
-.Nm
-Is a command interpreter for the system. It takes in the name of a command_file
-and any arguments that that command can accept and runs the process in a child
-process fork producing the output of that command.
-
-.SH USAGE / COMPILATION
-All files are to be compiled using "gcc -Wall -Werror -Wextra -pedantic *.c -o hsh"
-
-.SH RETURN VALUE
 .B hsh
-will return the exit stat, unless specified by an exit code.
-
+\- a simple command interpreter
+.SH SYNOPSIS
+.B hsh
+.RI [ FILENAME ]
+.SH DESCRIPTION
+hsh executes commands read from standard input or from a file. Lines are read
+one at a time. Each line is first split into tokens and dequoted. The first
+word is then checked for aliases. If an alias is found, it is expanded. The
+first word of the resulting command is checked to see if it is a builtin. If
+it is, then hsh executes the builtin before reading the next line of input.
+If it is not a builtin, a path search is performed. If the command is not
+found, the status is set to 127. If the command is found but not executable,
+the status is set to 126. Otherwise, hsh forks and executes the given command
+before reading the next line of input.
+mimic the behavior of other POSIX-compliant shells (e.g. dash)
+.SS BUILTINS
+.TP
+.B alias
+.RI [ NAME [=' VALUE ']
+.R ...]
+Print and define command aliases.
+.TP
+.B cd
+.RI [ DIRECTORY ]
+Change the current working directory.
+.TP
+.B env
+Print the environment.
+.TP
+.B exit
+.RI [ STATUS ]
+.Exit the shell.
+.TP
+.B help
+.R [
+.I BUILTIN
+.R ...]
+Show a help message.
+.TP
+.B setenv
+.I VARIABLE VALUE
+Set an environment variable.
+.TP
+.B unsetenv
+.I VARIABLE
+.R ...
+Unset an environment variable.
+.SH EXIT STATUS
+If the exit builtin is called with a status,
+.B hsh
+.R exits with the specified value. Otherwise,
+.B hsh
+.R exits with the exit status of the previous command.
+.SH ENVIRONMENT
+.TP
+PATH
+The default search path for executables
+.TP
+HOME
+The default argument for the cd builtin
+.TP
+PWD
+Set by the cd builtin upon changing directories
+.TP
+OLDPWD
+Set by the cd builtin and used as it's argument it receives ``-''
 .SH EXAMPLES
-=========================================
-
-.SH INTERACTIVE MODE EXAMPLE
 .PP
+hsh
 .PP
-$ ./hsh
-.PP
-##---> /bin/ls
-.PP
-hsh main.c shell.c
-.PP
-##---> exit
-.PP
-$
-.PP
-.PP
-=========================================
-
-.SH NON-INTERACTIVE MODE EXAMPLE
-.PP
-.PP
-$ echo "/bin/ls" | ./hsh
-.PP
-.PP
-hsh main.c shell.c test_ls_1
-
-=========================================
-
+echo ls | hsh
 .SH SEE ALSO
-.I sh(1)
-
+.BR sh(1) , bash(1) , csh(1) , dash(1)
 .SH BUGS
-When you type yes it shows an infinite loop.
-
+No known bugs.
+Report bugs to ...
 .SH AUTHORS
-.B Abdulqudus Abdulsalam - John 
-.br
- \ @almanahz\ 
+.PP
+Abdulqudus Abdulsalam
+.PP
+John Adeyemi
