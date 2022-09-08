@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 .\" Man page for hsh
 .TH HSH 1 "28 August 2019" "Holberton" "Holberton Shell Man Page"
+=======
+.TH SIMPLE-SHELL "06 SEPTEMBER 2022" "0.6" "ALX Simple-Shell"
+
+>>>>>>> f4fd1bb40eb1a7a2f958b4a38f87c483b6940abf
 .SH NAME
 .B hsh
 \- a simple command interpreter
@@ -79,7 +84,14 @@ echo ls | hsh
 No known bugs.
 Report bugs to ...
 .SH AUTHORS
+<<<<<<< HEAD
 .PP
 Abdulqudus Abdulsalam
 .PP
 John Adeyemi
+=======
+.B Abdulqudus Abdulsalam - Afolami John
+.br
+ \ @almanahz\
+ \@jhohn-code\
+>>>>>>> f4fd1bb40eb1a7a2f958b4a38f87c483b6940abf
